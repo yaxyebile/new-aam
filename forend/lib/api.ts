@@ -118,7 +118,7 @@ export async function getArticles(params: {
 }
 
 export async function getFeaturedArticles(): Promise<Article[]> {
-    const data = await request<Article[]>('/api/articles/featured')
+    const data = await request<Article[]>('https://new-aam-lrzs.vercel.app/api/articles/featured')
     return data.map(normalise)
 }
 
